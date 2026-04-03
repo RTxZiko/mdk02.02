@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitPlan</title>
+    <link rel="stylesheet" href="Components/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="Components/header.js" defer></script>
+    <script src="Components/footer.js" defer></script>
+    <script src="Components/navigation.js" defer></script>
+</head>
+<body>
+    <my-header></my-header>
+    
+    <main class="container">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <div class="sidebar-item active" data-screen="myplan">
+                    <span>Мой план</span>
+                </div>
+                <div class="sidebar-item" data-screen="workouts">
+                    <span>Тренировки</span>
+                </div>
+                <div class="sidebar-item" data-screen="muscles">
+                    <span>Группа мышц</span>
+                </div>
+                <div class="sidebar-item" data-screen="exercises">
+                    <span>Упражнения</span>
+                </div>
+                <div class="sidebar-item" data-screen="profile">
+                    <span>Профиль</span>
+                </div>
+            </nav>
+        </aside>
+
+        <section class="content">
+            <div id="myplan" class="screen active">
+                <h2 class="content-title">Мой план</h2>
+                <div class="days-grid">
+                    <div class="day-card" data-day="ПОНЕДЕЛЬНИК">
+                        <div class="day-name">ПОНЕДЕЛЬНИК</div>
+                    </div>
+                    <div class="day-card" data-day="ВТОРНИК">
+                        <div class="day-name">ВТОРНИК</div>
+                    </div>
+                    <div class="day-card" data-day="СРЕДА">
+                        <div class="day-name">СРЕДА</div>
+                    </div>
+                    <div class="day-card" data-day="ЧЕТВЕРГ">
+                        <div class="day-name">ЧЕТВЕРГ</div>
+                    </div>
+                    <div class="day-card" data-day="ПЯТНИЦА">
+                        <div class="day-name">ПЯТНИЦА</div>
+                    </div>
+                    <div class="day-card" data-day="СУББОТА">
+                        <div class="day-name">СУББОТА</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="workouts" class="screen">
+                <h2 class="content-title">Тренировки <span id="selected-day"></span></h2>
+                <div class="workout-card">
+                    <div class="workout-card-header">
+                        <div class="workout-buttons">
+                            <button class="btn btn-delete">Удалить</button>
+                            <button class="btn btn-create">Создать</button>
+                        </div>
+                    </div>
+                    <div class="workout-card-content">
+                        <p style="color: #111; font-size: 16px;">Здесь можно создать план тренировки на выбранный день</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="muscles" class="screen">
+                <h2 class="content-title">Группа мышц</h2>
+                <div class="muscles-grid">
+                    <div class="muscle-btn" data-muscle="chest">
+                        <span>Грудь</span>
+                    </div>
+                    <div class="muscle-btn" data-muscle="back">
+                        <span>Спина</span>
+                    </div>
+                    <div class="muscle-btn" data-muscle="arms">
+                        <span>Руки</span>
+                    </div>
+                    <div class="muscle-btn" data-muscle="legs">
+                        <span>Ноги</span>
+                    </div>
+                    <div class="muscle-btn" data-muscle="press">
+                        <span>Пресс</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="exercises" class="screen">
+                <h2 class="content-title">Упражнения</h2>
+                <p style="color: #111; font-size: 16px;">Здесь будут упражнения</p>
+            </div>
+
+            <div id="profile" class="screen">
+                <div class="profile-header">
+                    <h2 class="content-title">Профиль</h2>
+                    <button class="btn btn-edit">Изменить</button>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <img src="https://via.placeholder.com/100" alt="Profile avatar">
+                    </div>
+                    <div class="profile-info">
+                        <div class="info-group">
+                            <label>Name</label>
+                            <p>Ethan Chase</p>
+                        </div>
+                        <div class="info-group">
+                            <label>Gender</label>
+                            <p>Male</p>
+                        </div>
+                        <div class="info-group">
+                            <label>Height</label>
+                            <p>175</p>
+                        </div>
+                        <div class="info-group">
+                            <label>Weight</label>
+                            <p>60</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-notifications">
+                    <span>Уведомления</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+</body>
+</html>
