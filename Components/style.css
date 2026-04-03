@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: #355db3;
+    background-color: #1C5D99;
 }
 
 .logo-img img {
@@ -27,6 +27,8 @@
 body {
     background-color: #f5f5f7;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -38,13 +40,15 @@ body {
 }
 
 .sidebar {
-    flex: 0 0 220px;
+    flex: 0 0 250px;
+    height: 300px;
 }
 
 .sidebar-nav {
-    background-color: white;
+    background-color: #BBCDE5;
     border-radius: 16px;
     padding: 20px 0;
+
 }
 
 .sidebar-item {
@@ -53,8 +57,21 @@ body {
     padding: 14px 24px;
     color: #666;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: bold;
     gap: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin: 0 8px;
+    border-radius: 12px;
+}
+
+.sidebar-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-item.active {
+    background-color: #222222;
+    color: white;
 }
 
 .sidebar-item i {
@@ -63,28 +80,17 @@ body {
     color: #999;
 }
 
-.sidebar-item.active {
-    background-color: #f0f7f7;
-    color: #355db3;
-}
-
-.sidebar-item.active i {
-    color: #2A9D8F;
-}
-
-.sidebar-item:hover {
-    background-color: #f8f9fa;
-}
-
 .content {
     flex: 1;
-    background-color: white;
     border-radius: 24px;
     padding: 30px;
+    background-color: #BBCDE5;
+    width: 800px;
+    height: 600px;
 }
 
 .content-title {
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 600;
     color: #111;
     margin-bottom: 25px;
@@ -92,16 +98,28 @@ body {
 
 .days-grid {
     display: grid;
-    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
     margin-bottom: 40px;
+    max-width: 600px;
 }
 
 .day-card {
-    background-color: #f8f9fa;
+    background-color: #222222;
     border-radius: 14px;
-    padding: 16px 8px;
+    padding: 16px;
     text-align: center;
-    border: 1px solid transparent;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.day-card:hover {
+    background-color: #333333;
 }
 
 .day-card.today {
@@ -117,7 +135,7 @@ body {
 .day-name {
     font-size: 13px;
     font-weight: 600;
-    color: #666;
+    color: white;
     letter-spacing: 0.3px;
     margin-bottom: 8px;
 }
@@ -127,4 +145,209 @@ body {
     font-weight: 700;
     color: #111;
     line-height: 1.2;
+}
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+.footer {
+    background-color: #1C5D99;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.workout-card {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.workout-card-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.workout-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-delete {
+    background-color: #8B92A0;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #7a8290;
+}
+
+.btn-create {
+    background-color: #7A8AA2;
+    color: white;
+}
+
+.btn-create:hover {
+    background-color: #6a7a92;
+}
+
+.workout-card-content {
+    padding: 10px 0;
+}
+
+.muscles-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.muscle-btn {
+    background-color: #222222;
+    border-radius: 14px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+.muscle-btn i {
+    font-size: 24px;
+    width: 24px;
+}
+
+.muscle-btn:hover {
+    background-color: #333333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.muscle-btn active {
+    background-color: #1C5D99;
+}
+
+/* Стили для профиля */
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.btn-edit {
+    background-color: #8B92A0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-edit:hover {
+    background-color: #7a8290;
+}
+
+.profile-card {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.profile-avatar {
+    flex: 0 0 100px;
+}
+
+.profile-avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.info-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-group label {
+    font-size: 12px;
+    color: #999;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.info-group p {
+    font-size: 16px;
+    color: #111;
+    font-weight: 500;
+}
+
+.btn-notifications {
+    width: 100%;
+    background-color: #8B92A0;
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.2s;
+}
+
+.btn-notifications:hover {
+    background-color: #7a8290;
+}
+
+.btn-notifications i {
+    font-size: 18px;
 }
