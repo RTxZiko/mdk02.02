@@ -8,7 +8,6 @@ class MyHeader extends HTMLElement {
                 <div class="title">
                     <p>FitPlan</p>
                 </div>
-                
             </header>
         `;
     }
