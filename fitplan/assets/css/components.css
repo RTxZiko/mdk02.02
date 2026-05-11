@@ -1,0 +1,116 @@
+.panel {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 24px rgba(30, 36, 31, 0.06);
+}
+
+.card,
+.item {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 16px;
+}
+
+.item-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item-list > li {
+    margin-bottom: 12px;
+}
+
+.chip,
+.badge,
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chip,
+.badge {
+    border-radius: 14px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 8px 12px;
+}
+
+.chip.is-active {
+    background: var(--accent);
+    color: #fff;
+}
+
+.button {
+    border: 0;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer;
+}
+
+.button--ghost {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--line);
+}
+
+.button--danger {
+    background: var(--danger);
+}
+
+input,
+select {
+    width: 100%;
+    min-height: 42px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+    padding: 10px 12px;
+}
+
+.inline-form input {
+    min-width: 180px;
+}
+
+.inline-form--search {
+    width: 100%;
+    max-width: 360px;
+}
+
+.inline-form--search input {
+    flex: 1;
+}
+
+.forms form {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.alert {
+    padding: 14px 16px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+}
+
+.alert--success,
+.alert--info {
+    background: var(--accent-soft);
+}
+
+.alert--error {
+    background: #f7e7e3;
+    color: var(--danger);
+}
+
+@media (max-width: 720px) {
+    .button {
+        width: 100%;
+    }
+}

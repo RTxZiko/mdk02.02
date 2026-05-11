@@ -1,0 +1,53 @@
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #fffdf9, #eef5ef);
+}
+
+.hero > div:first-child {
+    flex: 1 1 560px;
+    padding-right: 24px;
+}
+
+.hero__meta {
+    flex: 0 0 220px;
+    padding: 18px;
+    background: rgba(36, 92, 75, 0.06);
+    border-radius: 16px;
+}
+
+.grid,
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid {
+    margin: 0 -8px 20px;
+}
+
+.grid > .panel {
+    width: calc(33.333% - 16px);
+    min-width: 240px;
+    margin: 0 8px 16px;
+}
+
+.catalog {
+    margin: 0 -8px;
+}
+
+.catalog > .card {
+    width: calc(33.333% - 16px);
+    min-width: 240px;
+    margin: 0 8px 16px;
+}
+
+@media (max-width: 720px) {
+    .hero > div:first-child,
+    .hero__meta,
+    .grid > .panel,
+    .catalog > .card {
+        width: 100%;
+        min-width: 0;
+    }
+}

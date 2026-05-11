@@ -1,0 +1,13 @@
+.auth-page {
+    padding-top: 32px;
+}
+
+.auth-page--register .panel {
+    margin-bottom: 0;
+    border-top: 4px solid #7b5f20;
+}
+
+.auth-page--register .muted a {
+    color: var(--accent);
+    font-weight: 700;
+}
